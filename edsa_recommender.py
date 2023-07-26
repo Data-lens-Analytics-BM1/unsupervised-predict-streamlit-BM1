@@ -41,7 +41,7 @@ from utils.data_loader import load_movie_titles
 from recommenders.collaborative_based import collab_model
 from recommenders.content_based import content_model
 
-movie_image = Image.open(r'resources/imgs/Movies_AI.webp')
+movie_image = Image.open(r'resources/imgs/movies_AI.webp')
 logo_a= Image.open(r'resources/imgs/lens.jpeg')
 
 def load_lottieurl(url):
