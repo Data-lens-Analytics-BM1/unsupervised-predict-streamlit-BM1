@@ -140,7 +140,7 @@ def main():
 		# header section
         with st.container():
                 
-            st.subheader("Welcome :wave:, We are Data Lens Analytics")
+            st.subheader("Welcome :wave:, To Data Lens' FantaFlix!!")
             st.image(logo_a, use_column_width=True)
             st.write('---')
             st.title('A Data Science Based Team Focused on Creating Real-World Data-Driven Solutions')
@@ -290,7 +290,79 @@ def main():
                 
     if page_selection == "Solution Overview":
         st.title("Solution Overview")
-        st.write("Describe your winning approach on this page")
+        st.title("The movie recommendation engine")
+        st.write('##')
+	
+
+        st.image(movie_image, caption='https://thinkml.ai/top-10-series-and-movies-about-ai/',
+		)
+        with st.container():
+            left_column, right_column = st.columns((4,1))
+            with left_column:
+				
+                st.write('---')
+                st.info("General Information")
+			
+                st.write('##')
+                st.write("""
+				In the ever-expanding world of movies, finding the perfect film to watch can be a daunting task. 
+                With a vast collection of resources and data available, it becomes essential to have a reliable recommendation system that suggests movies to users accurately. 
+                Our project focuses on building an advanced movie recommender engine using unsupervised machine learning algorithms to provide users with personalized movie suggestions 
+				""")
+            with right_column:
+                st_lottie(info_lottie)
+        st.write('#')
+        st.write('---')
+		# You can read a markdown file from supporting resources folder
+        st.markdown(
+		"""
+## About Recommendation System
+
+<p align ="justify"> Two main types of recommender systems are used: Content-Based Filtering and Collaborative Filtering.
+In Content-Based Filtering, the algorithm recommends movies based on the similarity of their properties or 
+features to other movies. For instance, if a user enjoys movie A, the system will find movies with similar 
+characteristics to A and recommend them.</p>
+
+<p align ="justify"> Collaborative Filtering, on the other hand, relies on the preferences of other users. 
+If users A and B share similar movie interests, the system will suggest movies that user A enjoyed to user B, 
+expecting a similar positive response. </p>
+
+## Data Sources and Preprocessing;
+
+ <p align ="justify"> We collected movie ratings and general information from IMDB. 
+ After thorough cleaning and preprocessing, the data was prepared for the unsupervised machine learning 
+ algorithms used to train the recommendation model. </p>
+ 
+## Web Application and Deployment;
+
+ <p align ="justify"> To make our recommendation engine easily accessible, 
+ we designed a user-friendly web application using Streamlit. This app allows users to interact with the models
+ and obtain valuable information about the project. The application has been deployed to ensure that 
+ individuals and organizations can access and benefit from our movie recommendations. </p>
+
+
+##
+---
+### Objectives
+
+Our primary objectives in developing this movie recommender system are as follows:
+
+1. Create a powerful recommendation engine that utilizes unsupervised machine learning models to suggest movies personalized to each user.
+
+2. Assist movie companies in aligning their production efforts with viewers' interests, leading to the creation of more engaging and enjoyable films.
+
+3. Empower streaming media platforms to engage their users with an effective recommendation algorithm, enhancing user satisfaction and retention.
+
+4. Build a system that enables movie companies and media platforms to increase revenue by attracting users to movies tailored to their tastes, ultimately boosting overall viewership and engagement.
+ """, unsafe_allow_html= True)
+
+        st.subheader("Raw movies data and label")
+        if st.checkbox('Show raw data'): # data is hidden if box is unchecked
+            st.write(raw_m[['movieId', 'title', 'genres']]) # will write the df to the pag
+        
+        st.subheader("Raw ratings data and label")
+        if st.checkbox('Show raw data', key= 2): # data is hidden if box is unchecked
+            st.write(raw_r[['movieId', 'rating']]) # will write the df to the pag
 
     # You may want to add more sections here for aspects such as an EDA,
     # or to provide your business pitch.
