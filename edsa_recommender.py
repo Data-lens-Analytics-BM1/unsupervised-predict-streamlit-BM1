@@ -166,8 +166,9 @@ def main():
 					    """
 				, unsafe_allow_html= True)
             with right_column:
+                
                 st_lottie(lottie_coding, height = 300, key = "coding" )
-			
+    
 		# This project
         with st.container():
             st.write("---")
@@ -210,6 +211,7 @@ def main():
                 
                 
                 with phonecall_column:
+                    
                     st_lottie(phonecall_lottie)
 
 				#styling the contact form

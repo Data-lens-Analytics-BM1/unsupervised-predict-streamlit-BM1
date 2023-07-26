@@ -46,24 +46,19 @@ ratings_df = pd.read_csv('resources/data/ratings.csv')
 ratings_df.drop(['timestamp'], axis=1,inplace=True)
 
 # We make use of an SVD model trained on a subset of the MovieLens 10k dataset.
-ifile = bz2.BZ2File("resources/models/svd_plus_compress", "rb")
-model=pickle.load(ifile)
-ifile.close()
+model=pickle.load(open('resources/models/tuned_svd.pkl', 'rb'))
 
 def prediction_item(item_id):
     """Map a given favourite movie to users within the
        MovieLens dataset with the same preference.
-
     Parameters
     ----------
     item_id : int
         A MovieLens Movie ID.
-
     Returns
     -------
     list
         User IDs of users with similar high ratings for the given movie.
-
     """
     # Data preprosessing
     reader = Reader(rating_scale=(0, 5))
@@ -78,52 +73,15 @@ def prediction_item(item_id):
 def pred_movies(movie_list):
     """Maps the given favourite movies selected within the app to corresponding
     users within the MovieLens dataset.
-
     Parameters
     ----------
     movie_list : list
         Three favourite movies selected by the app user.
-
     Returns
     -------
     list
         User-ID's of users with similar high ratings for each movie.
-
     """
-    # Store the id of users
-    id_store=[]
-    # For each movie selected by a user of the app,
-    # predict a corresponding user within the dataset with the highest rating
-    for i in movie_list:
-        predictions = prediction_item(item_id = i)
-        predictions.sort(key=lambda x: x.est, reverse=True)
-        # Take the top 10 user id's from each movie with highest rankings
-        for pred in predictions[:10]:
-            id_store.append(pred.uid)
-    # Return a list of user id's
-    return id_store
-
-# !! DO NOT CHANGE THIS FUNCTION SIGNATURE !!
-# You are, however, encouraged to change its content.  
-
-def collab_model(movie_list,top_n=10):
-    """Performs Collaborative filtering based upon a list of movies supplied
-       by the app user.
-
-    Parameters
-    ----------
-    movie_list : list (str)
-        Favorite movies chosen by the app user.
-    top_n : type
-        Number of top recommendations to return to the user.
-
-    Returns
-    -------
-    list (str)
-        Titles of the top-n movie recommendations to the user.
-
-    """
-
     # Store the id of users
     id_store=[]
     
