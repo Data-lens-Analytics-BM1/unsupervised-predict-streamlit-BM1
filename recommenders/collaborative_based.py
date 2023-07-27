@@ -172,6 +172,3 @@ def collab_model(movie_list,top_n=10):
     # Return list of movies
     recommended_movies = [val for sublist in recommended_movies for val in sublist]
     return recommended_movies
-
-
-
