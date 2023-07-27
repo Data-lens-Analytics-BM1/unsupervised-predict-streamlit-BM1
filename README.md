@@ -1,7 +1,7 @@
 # FANTAFLIX MOVIE RECOMMENDER APPLICATION
 
 
-## 1) OVERVIEW?
+## 1) OVERVIEW
 This repository documents work done by Data Lens Analytics in developing a web based movie recommernder application deployed via Streamlit.
 
 #### 1.1) What is a Recommender System?
