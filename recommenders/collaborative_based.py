@@ -1,5 +1,4 @@
 """
-
     Collaborative-based filtering for item recommendation.
 
     Author: Explore Data Science Academy.
