@@ -184,6 +184,6 @@ def collab_model(movie_list,top_n=10):
             #append the movie title on the list
             all_movies_recommended.append(mov)
     #get the top n movies
-    recommended_movies = all_movies_recommended[:top_n]
+    top_recommendations = all_movies_recommended[:top_n]
     #return the recommended movies
-    return recommended_movies
+    return top_recommendations
