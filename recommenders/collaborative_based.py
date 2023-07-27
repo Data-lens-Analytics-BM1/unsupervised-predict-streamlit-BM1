@@ -31,9 +31,9 @@
 import pandas as pd
 import numpy as np
 import pickle
-import bz2
-import os
-import copy
+#import bz2
+#import os
+#import copy
 import surprise
 from surprise import Reader, Dataset
 from surprise import SVD, NormalPredictor, BaselineOnly, KNNBasic, NMF
