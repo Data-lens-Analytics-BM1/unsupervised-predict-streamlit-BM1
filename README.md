@@ -26,7 +26,7 @@ For this repository, please refer to the following files:
 
 ||| Kindly ```fork``` the repo and upvote if you find helpful.
 
-![Fork Repo](resources/imgs/how_to_fork.png)  
+![Fork Repo](resources/imgs/fork.png)  
 
 To fork the repo, simply ensure that you are logged into your GitHub account, and then click on the 'fork' button at the top of this page as indicated within the figure above.
 
