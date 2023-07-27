@@ -1,5 +1,4 @@
 """
-
     Collaborative-based filtering for item recommendation.
 
     Author: Explore Data Science Academy.
@@ -23,9 +22,8 @@
     ---------------------------------------------------------------------
 
     Description: Provided within this file is a baseline collaborative
-    filtering algorithm for rating predictions on Movie data.
+    filtering algorithm for rating predictions on Movie data."""
 
-"""
 
 # Script dependencies
 import pandas as pd
@@ -174,3 +172,6 @@ def collab_model(movie_list,top_n=10):
     # Return list of movies
     recommended_movies = [val for sublist in recommended_movies for val in sublist]
     return recommended_movies
+
+
+
