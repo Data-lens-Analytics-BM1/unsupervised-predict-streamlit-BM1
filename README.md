@@ -2,7 +2,7 @@
 
 
 ## 1) OVERVIEW?
-This repository documents work done by a team of EXPLORE AI students in fulfilment of the requirement for Professional Certification in Data Science.
+This repository documents work done by Data Lens Analytics in developing a web based movie recommernder application deployed via Streamlit.
 
 #### 1.1) What is a Recommender System?
 Recommender systems are the unsung heroes of our modern technological world. Search engines, online shopping, streaming multimedia platforms, news-feeds - all of these services depend on recommendation algorithms in order to provide users the content they want to interact with.
